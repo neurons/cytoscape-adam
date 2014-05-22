@@ -23,3 +23,19 @@
 */
 package org.dishevelled.variation.adam;
 
+import java.net.URL; // how is this used?
+
+import java.io.Closeable;
+import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public final class ADAMReader
+{
+
+    private ADAMReader()
+    {
+        // TO-DO
+    }
+}
