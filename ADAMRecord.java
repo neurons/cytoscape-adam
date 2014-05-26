@@ -30,10 +30,10 @@ public final class ADAMRecord{
     private boolean failedVendorQualityChecks = false;
     private boolean duplicateRead = false;
 
-    private String mismatchingPositions;
+    /*private String mismatchingPositions;
     private String origQual;
 
-    private String attributes;
+    private String attributes;*/
 
     private String  recordGroupSequencingCenter = null;
     private String  recordGroupDescription = null;
