@@ -13,7 +13,7 @@ public final class ADAMRecord{
     private String sequence;
     private String mateReference;
     private long mateAlignmentStart;
-    private String cigar;
+    //private String cigar;   not needed
     private String qual;
     private String recordGroupName;
     private int recordGroupId;
