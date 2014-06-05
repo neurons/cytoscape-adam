@@ -41,9 +41,9 @@ private String variantAllele;
     	return referenceAllele;
     }
     
-    public String getreferenceAllele()
+    public String getVariantAllele()
     {
-    	return referenceAllele;	
+    	return variantAllele;	
     }
    
 }
