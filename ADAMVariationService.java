@@ -37,6 +37,8 @@ import org.dishevelled.variation.Feature;
 import org.dishevelled.variation.Variation;
 import org.dishevelled.variation.VariationService;
 
+import org.apache.spark.SparkContext // add to Maven buld 
+
 /**
  * ADAM file variation service.
  */
@@ -65,6 +67,11 @@ public final class ADAMVariationService implements VariationService
         final List<Variation> variations = new ArrayList<Variation>(); // ArrayList of Variation to be returned 
         try
         {
+            // Implementation 1
+            ADAMReader.stream(); // to-do
+            
+            
+            //Implementation 2 basd on SparkContext
             
         }
         catch (IOException e)
