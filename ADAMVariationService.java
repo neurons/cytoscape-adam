@@ -43,13 +43,13 @@ import org.apache.spark.SparkContext // add to Maven buld
  * ADAM file variation service.
  */
 
-public final class ADAMVariationService implements VariationService
+public final class AdamVariationService implements VariationService
 {
     private final String species;
     private final String reference;
     private final File file; // would this be a
 
-    public ADAMVariationService(final String species, final String reference, final File file)
+    public AdamVariationService(final String species, final String reference, final File file)
     {
     checkNotNull(species);
     checkNotNull(reference);
@@ -63,15 +63,15 @@ public final class ADAMVariationService implements VariationService
         checkArgument(species.equals(feature.getSpecies()));
         checkArgument(reference.equals(feature.getReference()));
 
-        // ick.  re-streams file every time
+        
         final List<Variation> variations = new ArrayList<Variation>(); // ArrayList of Variation to be returned 
         try
         {
             // Implementation 1
-            ADAMReader.stream(); // to-do
+            ADAMReader.stream(Files.newReaderSupplier); // to-do
             
             
-            //Implementation 2 basd on SparkContext
+            
             
         }
         catch (IOException e)
@@ -80,5 +80,34 @@ public final class ADAMVariationService implements VariationService
         }
         return variations;
     }
+
+    public ConvertADAMVariant(){
+        ADAMContig contig = new ADAMContig();
+
+    }
+
+    public Variation convert(AdamVariant variant){
+        
+        Variation variationtoReturn = new Variation;
+
+        // how to convert from AdamVariant to a Variation
+
+        variationtoReturn.getSpecies();
+        variationtoReturn.getReference();
+
+
+        
+        /*
+        private final String species;
+        private final String reference;
+        private final List<String> identifiers; // e.g. dbSNP id
+        private final String referenceAllele;
+        private final List<String> alternateAlleles;
+        private final String region;
+        private final int start;
+        private final int end;
+        */
+    }
+
 }
 }
