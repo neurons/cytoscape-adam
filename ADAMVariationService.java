@@ -87,7 +87,9 @@ public final class AdamVariationService implements VariationService
     }
 
     public Variation convert(AdamVariant variant){
-        
+       // use Adam Parser from Matt  
+       // todo -- use AdamContig and AdamVariant to create a Variation
+
         Variation variationtoReturn = new Variation;
 
         // how to convert from AdamVariant to a Variation
