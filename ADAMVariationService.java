@@ -47,7 +47,7 @@ public final class AdamVariationService implements VariationService
 {
     private final String species;
     private final String reference;
-    private final File file; // would this be a
+    private final File file; // would this be an .avdl file?
 
     public AdamVariationService(final String species, final String reference, final File file)
     {
@@ -80,13 +80,25 @@ public final class AdamVariationService implements VariationService
         }
         return variations;
     }
-
-    public ConvertADAMVariant(){
+    
+    public AdamVariant ConvertNullADAMVariant()
+    {
+    	
+    }
+    
+    public AdamVariant convertEmptyAdamVariant()
+    {
+    	
+    }
+    
+    public convertADAMVariant()
+    {
         ADAMContig contig = new ADAMContig();
 
     }
 
-    public Variation convert(AdamVariant variant){
+    public Variation convert(AdamVariant variant)
+    {
        // use Adam Parser from Matt  
        // todo -- use AdamContig and AdamVariant to create a Variation
 
@@ -110,6 +122,14 @@ public final class AdamVariationService implements VariationService
         private final int end;
         */
     }
+    
+    
+    
+    public AdamContig convertMissingContig()
+    {
+    	
 
-}
+    }
+    
+   
 }
